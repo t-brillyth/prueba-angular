@@ -1,0 +1,567 @@
+/* Please ❤ this if you like it!
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap')
+
+/* #Primary
+ *==================================================
+
+body
+  font-family: 'Open Sans', sans-serif !important
+  font-size: 16px
+  line-height: 24px
+  font-weight: 400
+  color: #212112
+  background-position: center
+  background-repeat: repeat
+  background-size: 7%
+  background-color: #fff
+  overflow-x: hidden
+  transition: all 200ms linear
+
+\::selection, ::-moz-selection
+  color: #fff
+  background-color: #fff
+
+.bg-gray
+  background-color: #7C7C7C
+
+.bg-gray2
+  background-color: #4D4D4D
+
+/* #Link to page
+ *==================================================
+
+.logo
+  position: absolute
+  bottom: 30px
+  right: 30px
+  display: block
+  z-index: 100
+  transition: all 250ms linear
+
+  img
+    height: 26px
+    width: auto
+    display: block
+    filter: brightness(10%)
+    transition: all 250ms linear
+
+body.dark .logo img
+  filter: brightness(100%)
+
+html, body, section
+  padding: 0
+  margin: 0
+  height: 100vh
+  font-size: 16px
+  overflow: hidden
+section
+    height: auto
+
+
+/* #Navigation
+ *==================================================
+
+.navigation-wrap
+  display: block
+  width: 100%
+  top: 0
+  left: 0
+  z-index: 1000
+  -webkit-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+  padding: 1rem 0rem 0rem
+
+.navbar
+  padding: 0
+
+.navbar-brand img
+  height: 28px
+  width: auto
+  display: block
+  -webkit-transition: all 0.3s ease-out
+  transition: all 0.3s ease-out
+
+.navbar-toggler
+  float: right
+  border: none
+  padding-right: 0
+
+  &:active, &:focus
+    outline: none
+
+.navbar-light .navbar-toggler-icon
+  width: 24px
+  height: 20px
+  background-image: none
+  position: relative
+  border-bottom: 4px solid #fff
+  transition: all 300ms linear
+  padding-top: 2px
+
+  &:after, &:before
+    width: 24px
+    position: absolute
+    height: 4px
+    background-color: #fff
+    top: 0
+    left: 0
+    content: ''
+    z-index: 2
+    transition: all 300ms linear
+
+  &:after
+    top: 8px
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon
+  &:after
+    transform: rotate(45deg)
+
+  &:before
+    transform: translateY(8px) rotate(-45deg)
+
+  border-color: transparent
+
+.nav-link
+  color: #C6C6C6 !important
+  font-weight: 500
+  transition: all 200ms linear
+
+.nav-item
+  &:hover .nav-link
+    color: #fff !important
+
+  &.active .nav-link
+    color: #fff !important
+    text-decoration: underline
+
+.nav-link
+  position: relative
+  padding: 5px 0 !important
+  display: inline-block
+
+.nav-item a:hover
+  text-decoration: underline
+
+/* #Primary style
+ *==================================================
+
+.bg-light
+  background-color: #fff !important
+  transition: all 200ms linear
+
+.section
+  position: relative
+  width: 100%
+  height: auto
+  display: block
+
+.full-height
+  height: 100vh
+
+.over-hide
+  overflow: hidden
+
+.absolute-center
+  position: absolute
+  top: 50%
+  left: 0
+  width: 100%
+  margin-top: 40px
+  transform: translateY(-50%)
+  z-index: 20
+
+h1
+  font-size: 2.2rem
+  line-height: 1
+  font-weight: 600
+  color: #36AADD
+  text-align: center
+  font-family: 'Open Sans', sans-serif !important
+
+p
+  text-align: center
+  margin-bottom: 2rem
+  font-size: 1.3rem
+  color: #999999
+  font-weight: 600
+  font-family: 'Open Sans', sans-serif !important
+
+header.actBorder
+  border-bottom: 50px solid #1f2029
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25)
+
+.nav-item
+  .dropdown-menu
+    visibility: hidden
+    opacity: 0
+    max-height: 0
+    display: block
+    padding: 0
+    margin: 0
+    width: 100%
+    transition: all 200ms linear
+
+  &.show .dropdown-menu
+    opacity: 1
+    visibility: visible
+    max-height: 999px
+    transform: translate3d(0, 0px, 0)
+    width: 100%
+    border-radius: 0px
+    box-shadow: 0px 0px 0px 0px
+    border:0px
+    background-color: transparent
+.dropdown-item:hover,
+.dropdown-item:focus
+    background-color: transparent !important
+.dropdown-toggle::after
+  display: none
+
+.dropdown-item
+  display: initial !important
+  padding: 10px 10px 0px !important
+  color: #fff !important
+  transition: all 200ms linear
+
+  &:hover, &:focus
+    color: #fff !important
+    background-color: transparent
+
+.navbar-brand img
+  filter: brightness(100%)
+
+.footerBottom
+  background: #000000 !important
+  color: #fff
+  font-size: 0.7rem
+
+.bg-light
+  background-color: #14151a !important
+
+
+li.nav-item.show .nav-link
+  color: #fff !important
+  text-decoration: revert
+
+.dropdown-menu
+  color: #fff
+  background-color: transparent
+
+.dropdown-menu.show::before 
+    content: ""
+    height: 50px
+    width: 200%
+    background-color: #000
+    position: absolute
+    left: -40%
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.25)
+    z-index: -2
+    top: 0
+
+.nav-item.active
+  position: inherit
+
+.navbar-light .navbar-toggler-icon
+  border-bottom: 3px solid #fff
+
+  &:after, &:before
+    background-color: #fff
+
+.navbar-toggler[aria-expanded="true"] .navbar-toggler-icon
+  border-color: transparent
+
+.row_form::before
+  border-bottom: 70px solid #36AADD
+  position: absolute
+  z-index: 0
+  width: 200%
+  height: 100px
+  top: 12vh
+  content: ""
+  left: -40%
+
+/*Slider
+.slideP, .slick-track 
+    height: 410px
+
+li.slick-active a 
+    background: #fff
+    color: #000
+    display: initial
+    padding: 0 10px
+    font-weight: 600
+    letter-spacing: 4px
+
+.slick-dots 
+    top: 25px !important
+    left: 25px !important
+    text-align: left !important
+    height: 30px
+    li
+        position: absolute !important
+a.custom-dot 
+    display: none
+.prev-slide
+    background: url(./assets/img/arowRight.svg) no-repeat
+    left: 30px
+    position: absolute
+    bottom: 2vh
+    z-index: 1
+    width: 2.5rem
+    height: 2.5rem
+
+.next-slide
+    background: url(./assets/img/arrowLeft.svg) no-repeat 
+    left: 80px
+    position: absolute
+    bottom: 2vh
+    z-index: 1
+    width: 2.5rem
+    height: 2.5rem
+
+/*FORM
+footer
+    position: absolute
+    bottom: 0
+    width: 100%
+
+.formCar
+  background: #E6E6E6
+  padding: 1rem
+  margin: 0
+  height: 100%
+
+  span 
+    font-size: smaller
+    color: red
+    padding: 0px
+    margin-bottom: 1rem
+
+
+.form-control
+  &:focus
+    box-shadow: 0 0 0 0 !important
+
+  &::placeholder
+    color: #999 !important
+
+  border-bottom: 1px solid #E6E6E6 !important
+  color: #999 !important
+  font-size: 0.8rem !important
+  padding: .45rem !important
+
+label
+  color: #999999
+  padding: 0px
+  margin: 0px
+  font-size: smaller
+
+input, select
+  border-radius: 0px !important
+  border-top: 0px !important
+  border-left: 0px !important
+  border-right: 0px !important
+
+.btn.btn-form
+  background-color: #BBD550
+  color: #fff
+  font-weight: 600
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(150, 168, 42, 1)
+  -moz-box-shadow: 0px 5px 0px 0px rgba(150, 168, 42, 1)
+  box-shadow: 0px 5px 0px 0px rgba(150, 168, 42, 1)
+
+  &:hover
+    background-color: rgba(150, 168, 42, 1)
+    color: #fff
+    font-weight: 600
+    -webkit-box-shadow: 0px 5px 0px 0px rgba(187, 213, 80, 1)
+    -moz-box-shadow: 0px 5px 0px 0px rgba(187, 213, 80, 1)
+    box-shadow: 0px 5px 0px 0px rgba(187, 213, 80, 1)
+::placeholder 
+    visibility: hidden
+
+.btn.disabled, .btn:disabled 
+    opacity: 0.35
+    color: #f6f6f6
+/*Footer
+
+.footerTop
+  p, a, li
+    color: #fff
+    font-weight: 400
+    font-size: .95rem
+    padding: 0 5px
+
+/* #Media
+ *==================================================
+
+@media only screen and (max-width: 768px)
+  .navigation-wrap
+        height: 50px
+  .navbar-expand-md .navbar-toggler 
+    display: block !important
+  .collapse:not(.show) 
+    display: none
+  .navbar
+      padding: 0px !important
+  .navbar-toggler 
+    position: absolute
+    left: -100px
+    top: 0
+    width: 30px
+    height: 30px
+
+  #navbarSupportedContent
+    background: #000
+    padding-left: 2rem
+    z-index: 6
+    position: absolute
+    width: 120%
+    left: -5vh
+    top: 3vh
+
+  .nav-item.active
+    padding: 0px
+
+  .navbar-light .navbar-toggler-icon
+    position: absolute
+    width: 24px
+    height: 20px
+    left: 0px
+    top: 0
+
+  .navbar-nav li
+    border-left: 2px solid #c6c6c6
+
+    a
+      color: #c6c6c6 !important
+      text-decoration: none !important
+      padding: 1px 0px
+
+  .navbar-nav .dropdown-menu
+          padding: 0px !important
+
+  .dropdown-item:before
+    content: '•'
+    padding-right: .25rem
+    font-size: large
+    line-height: 1
+  .dropdown-menu.show::before
+    visibility: hidden
+  body.dark
+    .nav-item::before, .dropdown-toggle::after
+      background-color: #fff
+
+    .dropdown-menu
+      background-color: transparent
+      box-shadow: none
+
+  .navbar-light .navbar-brand
+    padding: 0px
+    width: 70%
+    margin: -5px auto
+    text-align: center
+
+  .navbar-brand img
+    display: inline
+  .slick-track
+    height: 600px !important
+  .slick-slide img
+    height: inherit
+    width: initial
+  .next-slide
+    bottom: 5vh
+  .prev-slide
+    bottom: 5vh
+  /*contain primary
+  .row_form::before
+    visibility: hidden
+  section.container 
+    max-width: 100% !important
+    .section
+        margin-bottom: 0px !important
+  br
+    display: none !important
+
+  /*form
+  .col-form 
+    position: absolute !important
+    .formCar
+        padding: 1rem
+        margin: 6% 20% 0 45%
+        height: 100%
+  
+  form
+    width: 50%
+    margin: 0rem
+    background-color: #E6E6E6
+    padding: 1rem 1.3rem 2rem
+    border-top: 5px solid #36AADD
+    
+    label
+        display: none
+        
+    ::placeholder
+        visibility: visible
+  
+  .form-row
+        .col-12, 
+        .col-8, 
+        .col-4 
+            padding-bottom: 0px !important
+            padding-right: 1px !important
+            padding-left: 0px !important
+    
+   
+
+  /*Footer
+
+  .container.footerTop
+    font-size: small
+    max-width: 80%
+
+  .footerTop p
+    font-size: small
+    line-height: 1
+
+
+
+@media only screen and (max-width: 500px)
+  .navbar
+      padding: 0px !important
+  .navbar-brand img
+    height: 22px
+    margin-bottom: 2rem
+  .navbar-light .navbar-brand
+    height: 30px
+  .navbar-toggler 
+      left: 30px
+
+  .dropdown-item
+        display: block !important
+  /*slide
+  .slideP, .slick-track 
+    height: auto !important
+  .prev-slide,
+  .next-slide
+      display: none !important
+  .slick-dotted.slick-slider
+      margin-bottom: 0px !important
+  .col-form
+       position: inherit !important
+       margin-top: -40px
+       z-index: 888
+       margin-bottom: 3rem
+  .col-form .formCar
+    margin: 0 auto !important
+    width: 80% !important
+
+  .slick-slide 
+       img
+        width: inherit !important
+  /*footer
+  .footerTop
+    p, a, li
+      font-size: xx-small
+      line-height: normal

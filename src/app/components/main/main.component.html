@@ -1,0 +1,104 @@
+<div class="section mt-3 mb-5 mh-100 h-100 ">
+    <div class="">
+        <div class="row row_title">
+            <div class="col-12 center my-3">
+                <h1 class="colorBlue">Cotiza tu seguro automotriz</h1>
+                <p>¡Resultados instantáneos!</p>
+            </div>
+            <br>
+        </div>
+        <div class="row row_form mh-100 h-100">
+            <div class="col-xl-8 col-lg-8 col-md-12 slideP p-0">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+                    <div ngxSlickItem *ngFor="let image of images" class="slide">
+                        <img src="{{ image.img }}" width="100%">
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+            <div class="col-xs-4 col-lg-4 col-md-12 col-form p-0">
+                <form #quoteForm="ngForm" class="formCar">
+                    <div class="form-row">
+                        <div class="col-12 pb-2">
+                            <label for="">Marca de Auto</label>
+                            <select id="perro" class="form-control" required>
+                                <option value="blank" hidden></option>
+                                <option value="title" class="selectOption" hidden>Marca de Auto</option>
+                                <option>BMW</option>
+                                <option>Mercedes-Benz</option>
+                                <option>Audi</option>
+                                <option>Lexus</option>
+                                <option>Renault</option>
+                                <option>Ford</option>
+                                <option>Opel</option>
+                                <option>Seat</option>
+                            </select>
+                        </div>
+                        <div class="col-8 pb-2">
+                            <label for="Modelo">Modelo</label>
+                            <select class="form-control" required>
+                                <option value="blank" hidden></option>
+                                <option value="title" hidden>Modelo</option>
+                                <option value="252">4C</option>
+                                <option value="148">Giulietta </option>
+                                <option value="38246">Tonale</option>
+                                <option value="64">MiTo</option>
+                            </select>
+                        </div>
+                        <div class="col-4 pb-2">
+                            <label for="">Año</label>
+                            <select class="form-control" required>
+                                <option value="blank"  selected disabled hidden></option>
+                                <option value="title"   disabled hidden>Año</option>
+                                <option>2021</option>
+                                <option>2020</option>
+                                <option>2019</option>
+                                <option>2018</option>
+                            </select>
+
+                        </div>
+                        <div class="col-12 pb-2">
+                            <label for="">Email</label>
+                            <input class="form-control" type="email" placeholder="Email" name="email" ngModel
+                                #email="ngModel" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                            <span *ngIf="!email.valid && email.touched">
+                                El correo no es valido!!
+                            </span>
+                        </div>
+                        <div class="col-12 pb-2">
+                            <label for="">Teléfono Celular</label>
+                            <input class="form-control" type="phone" min="10" max="10" pattern="^3[0-9]{9}$"
+                                name="phone" ngModel #phone="ngModel" placeholder="Teléfono Celular" required>
+                            <span class="pb-2" *ngIf="!phone.valid && phone.touched">
+                                El teléfono no es valido!!
+                            </span>
+                        </div>
+
+                        <input type="submit" data-toggle="modal" data-target="#myModal" value="Cotizar ahora"
+                            class="btn btn-form mt-3 btn-lg btn-block" [disabled]="!quoteForm.form.valid">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
