@@ -48,13 +48,15 @@ body
 
 body.dark .logo img
   filter: brightness(100%)
-
+html 
+  overflow: hidden
+  
 html, body, section
   padding: 0
   margin: 0
   height: 100vh
   font-size: 16px
-  overflow: hidden
+  
 section
     height: auto
 
@@ -277,7 +279,7 @@ li.nav-item.show .nav-link
   z-index: 0
   width: 200%
   height: 100px
-  top: 12vh
+  top: 18vh
   content: ""
   left: -40%
 
@@ -322,8 +324,7 @@ a.custom-dot
 
 /*FORM
 footer
-    position: absolute
-    bottom: 0
+    z-index: 8
     width: 100%
 
 .formCar
@@ -337,7 +338,10 @@ footer
     color: red
     padding: 0px
     margin-bottom: 1rem
-
+.footerTop 
+  a:hover 
+    color: #f8f9fa
+    text-decoration: none
 
 .form-control
   &:focus
@@ -417,9 +421,9 @@ input, select
     padding-left: 2rem
     z-index: 6
     position: absolute
-    width: 120%
-    left: -5vh
-    top: 3vh
+    width: 140vh
+    left: -13vh
+    top: 3.8vh
 
   .nav-item.active
     padding: 0px

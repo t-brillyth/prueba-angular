@@ -34,7 +34,7 @@ export class MainComponent implements OnInit {
     "nextArrow": "<div class='nav-btn next-slide'></div>",
     "prevArrow": "<div class='nav-btn prev-slide'></div>",
     "dots": true,
-    "infinite": true,
+    "infinite": false,
     customPaging: function (slider, i) {
       var slideNumber = (i + 1),
         totalSlides = slider.slideCount;
